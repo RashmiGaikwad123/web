@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sidebar with Icons</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jss.js">
+
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/apexcharts@3.27.3/dist/apexcharts.min.css"> -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+  rel="stylesheet">
+  
+<body>
+  <div class="sidebar">
+    <ul>
+      <li><i class="fas fa-"></i></li>
+      <li><i class="fas fa-search"></i></li>
+      <li><i class="fas fa-home"></i></li>
+      <li><i class="fas fa-info-circle"></i></li>
+      <li><i class="fas fa-envelope"></i></li>
+      <!-- Add more sidebar items with icons here -->
+    </ul>
+  </div>
+  <div class="content">
+    <div class="white-card">
+        <div class="col-md-2 column3">
+            <div class="profile">
+                <div class="icon">
+                  <span>B</span>
+                </div>
+                <div class="info">
+                  <h3>Hii Mike....</h3>
+                  <p>Welcome back</p>
+                </div>
+              </div>
+
+
+              <div class="data">
+                  <h3>Today</h3>
+              </div>
+
+              <div class="no">
+                  <h1>$19,892</h1>
+                  <h6>Amount Balancs</h6>
+              </div>
+
+
+              <div class="no1">
+                <h2>$4,000</h2>
+                <p>year-to-date contribution<p>
+            </div>
+
+
+            <div class="no2">
+                <h2>$1,892</h2>
+                <p>Total Interest<p>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">I want to <i class="fas fa-angle-down"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Option 1</a>
+                  <a href="#">Option 2</a>
+                  <a href="#">Option 3</a>
+                </div>
+              </div>
+
+              <div class="s">
+                  <h2>Recent transaction</h2>
+                  <h5>2020-08-07</h5>
+                  <h4>withdrawl transfer to bank-xxx11</h4>
+                  <h5>2020-07-21</h5>
+                  <h4>withdrawl transfer to bank-xxx11</h4>
+                  <h5>2020-07-16</h5>
+                  <h4>withdrawl transfer to bank-xxx11</h4>
+              </div>
+        </div>
+
+
+
+        <div class="col-md-8 column6">
+
+
+<div class="infoo">
+    <h4>Retirement Income</h4>
+    <div class="dataa">
+        <p>Starting year 2056</p>
+    </div>
+</div>
+
+
+
+<div class="container">
+   
+    <div class="card">
+        <div class="card-body">
+          <div class="noo">
+              <h3>$300,000</h3>
+              <div class="info">
+                  <h6>My Goal</h6>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+            <div class="noo">
+                <h3>59%</h3>
+                <div class="info">
+                    <h6>Goal achieved</h6>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+            <div class="noo">
+                <h3>$300</h3>
+                <div class="info">
+                    <h6>Monthly income</h6>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+           
+<div id="chart">
+
+    <script >
+     var options = {
+          series: [{
+          name: 'Inflation',
+          data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+        }],
+          chart: {
+          height: 350,
+          type: 'bar',
+        },
+        plotOptions: {
+          bar: {
+            borderRadius: 10,
+            dataLabels: {
+              position: 'top', // top, center, bottom
+            },
+          }
+        },
+        dataLabels: {
+          enabled: true,
+          formatter: function (val) {
+            return val + "%";
+          },
+          offsetY: -20,
+          style: {
+            fontSize: '12px',
+            colors: ["#304758"]
+          }
+        },
+        
+        xaxis: {
+          categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          position: 'top',
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false
+          },
+          crosshairs: {
+            fill: {
+              type: 'gradient',
+              gradient: {
+                colorFrom: '#D8E3F0',
+                colorTo: '#BED1E6',
+                stops: [0, 100],
+                opacityFrom: 0.4,
+                opacityTo: 0.5,
+              }
+            }
+          },
+          tooltip: {
+            enabled: true,
+          }
+        },
+        yaxis: {
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false,
+          },
+          labels: {
+            show: false,
+            formatter: function (val) {
+              return val + "%";
+            }
+          }
+        
+        },
+        title: {
+        //   text: 'Monthly Inflation in Argentina, 2002',
+          floating: true,
+          offsetY: 330,
+          align: 'center',
+          style: {
+            color: '#444'
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
+  
+
+  <div class="text-container">
+    <h1 class="main-text">How do I compare to my peers?</h1>
+    <h2 class="sub-title">These Members represent current goal achievement</h2>
+  </div>
+
+
+
+
+
+  <div class="underline">
+    <div class="dropdown">
+      <span class="title">Age:</span> 
+     <span class="text"> under 30</span> <span class="arrow">&#9662;</span></button>
+      <ul class="dropdown-menu">
+          <li>Option 1</li>
+          <li>Option 2</li>
+      </ul>    
+   </div>
+    </div>
+
+
+
+    <div class="underline">
+      <div class="dropdown">
+        <span class="title">Salary:</span> 
+       <span class="text"> K 20-K 30</span> <span class="arrow">&#9662;</span></button>
+        <ul class="dropdown-menu">
+            <li>Option 1</li>
+            <li>Option 2</li>
+        </ul>    
+     </div>
+      </div>
+
+  <div class="underline">
+  <div class="dropdown">
+    <span class="title">Gender:</span> 
+   <span class="text"> Male</span> <span class="arrow">&#9662;</span></button>
+    <ul class="dropdown-menu">
+        <li>Option 1</li>
+        <li>Option 2</li>
+    </ul>    
+ </div>
+  </div>
+</div>
+
+
+
+
+<div id="chart">
+  <script>
+    var options = {
+            series: [70],
+            chart: {
+            height: 150,
+            type: 'radialBar',
+          },
+          plotOptions: {
+            radialBar: {
+              hollow: {
+                size: '50%',
+              }
+            },
+          },
+          labels: ['78%'],
+          };
+  
+          var chart = new ApexCharts(document.querySelector("#chart"), options);
+          chart.render();
+        
+        
+
+  </script>
+    </div>
+  
+
+        </div>
+        <div class="col-md-2 column3">
+          <div class="abc">
+            <h4>Retirement Strategy</h4>
+          </div>
+
+
+
+
+          <div class="slider-container">
+            <h4>Employee Contribution</h4>
+            <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+            <span class="value" id="sliderValue"></span>
+        </div>
+
+
+        <div class="slider-container">
+          <h4>Retirement Age</h4>
+          <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+          <span class="value" id="sliderValue"></span>
+      </div>
+
+
+
+
+      <div class="percent">
+        <h4>Employee Contribution 8.4%</h4>
+        <h4>Interest Rate  5%</h4>
+      </div>
+
+
+      <button class="update-button">Update</button>
+
+        </div>
+      </div>
+  </div>
+</body>
+
+
+   
+</html>
